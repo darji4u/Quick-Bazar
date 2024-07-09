@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".Activity.ProductDetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/quick_bazar_2"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="500dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_sb"
+                android:text="Men's Plain T-shirt - Solid Tee TXB Fashion Black / XL"
+
+                android:textColor="@color/black1"
+                android:textSize="16dp"
+
+                />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_sb"
+                android:text="$ 100"
+                android:textColor="@color/green"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_m"
+                android:text="Experience comfort and style with our premium cotton T-shirt, designed for everyday wear. Featuring a classic fit and soft, breathable fabric, this versatile tee is perfect for any casual occasion. Available in a variety of colors to match your personal style."
+
+                android:textColor="@color/grey"
+                android:textSize="14dp"
+
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sizeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_sb"
+                    android:text="Size"
+                    android:textColor="@color/black1"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/proS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:width="40dp"
+                        android:height="40dp"
+                        android:background="@drawable/card_background"
+                        android:backgroundTint="@color/greyLight"
+                        android:fontFamily="@font/poppins_sb"
+                        android:gravity="right"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="5dp"
+                        android:text="S"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="20sp"
+
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/proM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:width="40dp"
+                        android:height="40dp"
+                        android:background="@drawable/card_background"
+                        android:backgroundTint="@color/greyLight"
+                        android:fontFamily="@font/poppins_sb"
+                        android:gravity="right"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="5dp"
+                        android:text="M"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="20sp"
+
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/proL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:width="40dp"
+                        android:height="40dp"
+                        android:background="@drawable/card_background"
+                        android:backgroundTint="@color/greyLight"
+                        android:fontFamily="@font/poppins_sb"
+                        android:gravity="right"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="5dp"
+                        android:text="L"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="20sp"
+
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/proXL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:width="40dp"
+                        android:height="40dp"
+                        android:background="@drawable/card_background"
+                        android:backgroundTint="@color/greyLight"
+                        android:fontFamily="@font/poppins_sb"
+                        android:gravity="right"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="5dp"
+                        android:text="XL"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="20sp"
+
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/colorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="100dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_sb"
+                    android:text="Colors"
+                    android:textColor="@color/black1"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/btnWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/card_background"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/black2"
+                        android:textColorHint="@color/grey">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/card_background_yellow"
+                            android:backgroundTint="@color/greyLight" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/card_background"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/black2"
+                        android:textColorHint="@color/grey">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/card_background"
+                            android:backgroundTint="@color/black2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/card_background"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/black2"
+                        android:textColorHint="@color/grey">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/card_background"
+                            android:backgroundTint="@color/blueDark" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/card_background"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/black2"
+                        android:textColorHint="@color/grey">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/card_background"
+                            android:backgroundTint="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnGreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/card_background"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/black2"
+                        android:textColorHint="@color/grey">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/card_background"
+                            android:backgroundTint="@color/green" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/minus_square" />
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textColor="@color/black1"
+                android:textAlignment="center"
+                android:layout_marginLeft="10dp"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:inputType="number"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_background"
+                android:backgroundTint="@color/greyLightest"
+                />
+
+            <ImageView
+                android:id="@+id/btnPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add_square" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnAddToCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:backgroundTint="@color/primary"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/shopping_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/btnTvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_m"
+                android:text="Add to Cart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

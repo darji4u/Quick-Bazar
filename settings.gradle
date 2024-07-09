@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url("https://jcenter.bintray.com")
+        }
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url("https://jcenter.bintray.com")
+        }
+    }
+}
+rootProject.name = "ebazarin"
+include ':app'
